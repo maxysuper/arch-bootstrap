@@ -28,7 +28,7 @@ spotify \
 onlyoffice-bin \
 mattermost-desktop \
 anydesk-bin \
-vmware-workstation \
+# vmware-workstation \
 portproton \
 discord \
 yandex-browser \
