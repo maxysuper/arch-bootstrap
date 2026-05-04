@@ -72,9 +72,9 @@ else
 echo "Yandex Browser не найден. Открой вручную: https://ya.ru/device"
 fi
 
-yandex-disk setup
+# yandex-disk setup
 
-systemctl --user enable --now yandex-disk.service || true
+# systemctl --user enable --now yandex-disk.service || true
 
 echo "Yandex Disk настроен."
 else
