@@ -35,7 +35,8 @@ yandex-browser \
 vk-messenger-bin \
 keepassxc \
 steam \
-chitubox-free-bin
+chitubox-free-bin \
+wireguard
 
 echo "==> Installing Flatpak..."
 sudo pacman -S --needed --noconfirm flatpak
