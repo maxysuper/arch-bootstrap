@@ -8,7 +8,7 @@ echo "==> Installing base packages..."
 sudo pacman -S --needed --noconfirm \
 base-devel git curl wget neovim rsync openssh \
 alacritty yazi btop fastfetch eza dust \
-bluetui wiremix impala satty zoxide timeshift \
+bluetui wiremix impala satty zoxide \
 traceroute bind nmap iputils
 
 echo "==> Installing yay..."
