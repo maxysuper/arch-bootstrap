@@ -51,39 +51,6 @@ org.videolan.VLC \
 com.obsproject.Studio \
 org.remmina.Remmina
 
-echo "==> Enabling services..."
-sudo systemctl enable bluetooth || true
-
-echo "==> Setting up Yandex Disk..."
-
-if command -v yandex-disk &>/dev/null; then
-mkdir -p "$HOME/Yandex.Disk"
-
-echo
-echo "Открою страницу авторизации ya.ru/device в Yandex Browser."
-echo "После входа вернись в терминал и продолжи настройку yandex-disk."
-echo
-
-if command -v yandex-browser &>/dev/null; then
-nohup yandex-browser "https://ya.ru/device" >/dev/null 2>&1 &
-elif command -v yandex-browser-stable &>/dev/null; then
-nohup yandex-browser-stable "https://ya.ru/device" >/dev/null 2>&1 &
-else
-echo "Yandex Browser не найден. Открой вручную: https://ya.ru/device"
-fi
-
-# yandex-disk setup
-
-# systemctl --user enable --now yandex-disk.service || true
-
-echo "Yandex Disk настроен."
-else
-echo "yandex-disk не установлен, пропускаю настройку."
-fi
-
-echo "Синхронизация Yandex Disk"
-yandex-disk sync
-
 echo "==> Linking ~/.ssh from Yandex Disk..."
 
 SRC="$HOME/Yandex.Disk/backup/.ssh"
