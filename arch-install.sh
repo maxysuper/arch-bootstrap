@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 echo "==> Updating system..."
 sudo pacman -Syu --noconfirm
